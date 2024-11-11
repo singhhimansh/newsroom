@@ -1,6 +1,5 @@
 import Button from "@/components/Button";
 import React, { EventHandler, useCallback } from "react";
-import "@/styles/navbar.css";
 import { routes } from "@/constants/routes";
 import { NavtabType } from "@/types/navtab.types";
 import { useRouter } from "next/router";
