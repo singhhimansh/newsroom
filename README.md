@@ -1,40 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+An application to show tranding news using [HackerNews API](https://github.com/HackerNews/API "HackerNews API"). Live on [https://newsroom-eta.vercel.app/](https://newsroom-eta.vercel.app/)
 
-## Getting Started
+## Features & Tech stack
 
-First, run the development server:
+* Next.js page routing framework used
+* Has discreate folder struction for better scalablity and understanding
+* **Dynamic route** to show pages for three different stories: **Top, New, and Best**
+* Shimmer UI for loader
+* **Responsive** for all screen devices
+* Custom reusable components, utility fucntions and hooks
+* **404 file** to grep unrecognised invalid routes and redirect to home route.
+* **Pagination** and fetching paginated data
 
-```bash
+  **Note:**
+
+  1. Due to the api limitations, Could not find any api which returns data in a single call. Here, first api gives the Id of news stories and another api to get content of a perticular news story.
+
+
+**Tech used:**
+
+Next.js, Typescript, Axios, Turbopack, Tanstack React-Query, 
+
+## Codebase documentation
+
+```
+## make sure has node v20 or above
+npm install
+
+## if this does not work, try 
+npm install --force
+
+## to start server at http://localhost:3000
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+**File structure**
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+![1731389566553](image/README/1731389566553.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+* **components :** Generic reusable components like button, loader and others.
+* **constants:** stores all data which are contants  and needed throughout the app like apis url, routes etc
+* **features:** feature specific reusable components
+* **hooks:** stores custom hooks pertaing to a feature following feature specific nomenclature.
+* **pages:** stores page routes
+* **public:** stores static assets
+* **services:** has all network request making functions
+* **styles:** stores css files
+* **types:** stores exportable types used thoughout the app
+* **utils:** stores all utility functions.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Way forward
 
-To learn more about Next.js, take a look at the following resources:
+* Adding middleware, errorboundary, state management tools like redux, reducer or context api, axios Snapshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Web                                            | shimmer ui                                     | Mobile                                         |
+| ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
+| ![1731391092823](image/README/1731391092823.png) | ![1731391112009](image/README/1731391112009.png) | ![1731391163475](image/README/1731391163475.png) |
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Deployed on vercel, can be visited at [https://newsroom-eta.vercel.app/](https://newsroom-eta.vercel.app/)
