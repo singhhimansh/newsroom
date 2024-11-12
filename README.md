@@ -3,17 +3,19 @@ An application to show tranding news using [HackerNews API](https://github.com/H
 ## Features & Tech stack
 
 * Next.js page routing framework used
-* Has discreate folder struction for better scalablity and understanding
+* Has discreate folder structure for better scalablity and understanding
 * **Dynamic route** to show pages for three different stories: **Top, New, and Best**
 * Shimmer UI for loader
 * **Responsive** for all screen devices
 * Custom reusable components, utility fucntions and hooks
+* React-Query for network call state management and caching
 * **404 file** to grep unrecognised invalid routes and redirect to home route.
 * **Pagination** and fetching paginated data
 
   **Note:**
 
   1. Due to the api limitations, Could not find any api which returns data in a single call. Here, first api gives the Id of news stories and another api to get content of a perticular news story.
+  2. Application is relatively small and has not much states, hence did not see the need of using Redux/Context Api. But with scale these should be integrated for state management
 
 
 **Tech used:**
@@ -52,7 +54,9 @@ npm run dev
 
 ## Way forward
 
-* Adding middleware, errorboundary, state management tools like redux, reducer or context api, axios Snapshots
+* Adding middleware, errorboundary, state management tools like redux, reducer or context api, axios
+
+## Snapshots
 
 | Web                                            | shimmer ui                                     | Mobile                                         |
 | ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
